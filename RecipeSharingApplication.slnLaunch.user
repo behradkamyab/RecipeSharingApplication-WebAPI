@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "RecipeSharingWebApi\\RecipeSharingWebApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "SignalRTestCli\\SignalRTestCli.csproj",
+        "Action": "Start",
+        "DebugTarget": "SignalRTestCli"
+      }
+    ]
+  }
+]

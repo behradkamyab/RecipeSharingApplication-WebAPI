@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+    <html>
+    <head>
+        <title>SignalR Notification Test</title>
+        <script src="https://unpkg.com/@microsoft/signalr@8.0.7/dist/browser/signalr.js"></script>
+    </head>
+    <body>
+        <h1>Real-Time Notifications</h1>
+        <ul id="notifications"></ul>
+
+        <script>
+            // Replace with your JWT token (obtained after login)
+            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiZWhyYWRlZGdlIiwiaXNzIjoiYmVocmFkLmNvbSIsImV4cCI6MTczNzgwMjQxNCwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJlZDE5OWYwMy1lNDVjLTQwOWQtODg1OS00NDhjOTQxOWVlMmIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJraWFuQHlhaG9vLmNvbSIsImlhdCI6MTczNzc5ODgxNCwibmJmIjoxNzM3Nzk4ODE0fQ.3XPG0W9zIZxn_2UZ6HpFpV3wXg38CVYyW6Hf3Ue45dM";
+
+            // Create a connection to the SignalR hub
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://localhost:7173/notificationHub", {
+                    accessTokenFactory: () => token // Pass the JWT token
+                })
+                .build();
+
+            // Handle incoming notifications
+            connection.on("ReceiveNotification", (notification) => {
+                console.log("New notification:", notification);
+
+                // Display the notification in the HTML
+                const li = document.createElement("li");
+                li.textContent = `${notification.userId}: ${notification.message}`;
+                document.getElementById("notifications").appendChild(li);
+            });
+
+            // Start the connection
+            connection.start()
+                .then(() => {
+                    console.log("Connected to SignalR hub.");
+                })
+                .catch(err => {
+                    console.error("SignalR connection failed:", err);
+                });
+        </script>
+    </body>
+</html>
