@@ -31,7 +31,7 @@ public class RecipeManager : IRecipeManager
         try
         {
 
-            var recipeModel = new RecipeModel(recipe.Name, recipe.Description, recipe.Category, recipe.Cuisine, userId);
+            var recipeModel = new RecipeModel( Guid.NewGuid(),recipe.Name, recipe.Description, recipe.Category, recipe.Cuisine, userId);
 
             await _recipeRepository.AddRecipeAsync(recipeModel);
 
@@ -420,13 +420,8 @@ public class RecipeManager : IRecipeManager
                     Data = null
                 };
 
-            var ingredient = new IngredientRecipe
-            {
-                Id = Guid.NewGuid(),
-                Name = ingredientRequest.Name,
-                Quantity = ingredientRequest.Quantity,
-                RecipeId = recipeId
-            };
+            var ingredient = new IngredientRecipe(Guid.NewGuid(), recipeId, ingredientRequest.Name , ingredientRequest.Quantity);
+           
             await _recipeRepository.AddIngredientAsync(ingredient);
             return new RecipeManagerResponse<IngredientRecipe>
             {
@@ -679,14 +674,8 @@ public class RecipeManager : IRecipeManager
                     Data = null
                 };
 
-            var instruction = new InstructionRecipe()
-            {
-                Id = Guid.NewGuid(),
-                Step = await _recipeRepository.GetLastInstructionStep(recipeId) + 1,
-                Content = content,
-                RecipeId = recipeId,
-            };
-
+            var instruction = new InstructionRecipe(Guid.NewGuid(), recipeId, await _recipeRepository.GetLastInstructionStep(recipeId) + 1, content);
+           
 
 
             await _recipeRepository.AddInstructionAsync(instruction);

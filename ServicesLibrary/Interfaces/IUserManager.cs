@@ -21,7 +21,7 @@ namespace ServicesLibrary.Interfaces
         Task<UserManagerResponse<TokenView>> LoginUserAsync(UserLoginRequest user); // Auth controller
 
 
-        Task<UserManagerResponse<ProfileViewModel>> GetProfileAsync(string userId, GetRecipeCountForOneUserDelegate getRecipesCountAsync); // user controller
+        Task<UserManagerResponse<ProfileViewModel>> GetProfileAsync(string userId, Func<string, Task<RecipeManagerResponse<int>>> getRecipesCountAsync); // user controller
         Task<UserManagerResponse<string>> ChangeBioForUserAsync(string userId, string bio);  // user controller
 
         Task<UserManagerResponse<string>> AddRecipeToUserFavoriteAsync(Guid recipeId, string userId); // user controller
@@ -31,8 +31,8 @@ namespace ServicesLibrary.Interfaces
 
         Task<UserManagerResponse<string>> FollowUserAsync(string followerId, string followedId);
         Task<UserManagerResponse<string>> UnfollowUserAsync(string followerId, string followedId);
-        Task<UserManagerResponse<IEnumerable<ProfileViewModel>>> GetAllFollowersForUserAsync(string userId, GetRecipeCountDelegate getRecipeCountAsync);
-        Task<UserManagerResponse<IEnumerable<ProfileViewModel>>> GetAllFollowingForUserAsync(string userId, GetRecipeCountDelegate getRecipeCountAsync);
+        Task<UserManagerResponse<IEnumerable<UserViewModel>>> GetAllFollowersForUserAsync(string userId);
+        Task<UserManagerResponse<IEnumerable<UserViewModel>>> GetAllFollowingForUserAsync(string userId);
         Task<UserManagerResponse<int>> GetAllFollowersCountForUserAsync(string userId);
         Task<UserManagerResponse<int>> GetAllFollowingsCountForUserAsync(string userId);
 

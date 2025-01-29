@@ -26,8 +26,8 @@ namespace DataAccessLayerLibrary.Interfaces
         Task SaveFollowAsync(Follow follow);
         Task UnfollowAsync(string followerId , string followedId);
 
-        Task<IEnumerable<UserProfileModel>?> GetAllFollowersAsync(string userId); // get all of the followers of the auhtorized user
-        Task<IEnumerable<UserProfileModel>?> GetAllFollowingsAsync(string userId); // get all of the followings of the auhtorized user
+        Task<IEnumerable<ApplicationUser>?> GetAllFollowersAsync(string userId); // get all of the followers of the auhtorized user
+        Task<IEnumerable<ApplicationUser>?> GetAllFollowingsAsync(string userId); // get all of the followings of the auhtorized user
 
         Task<int> GetAllFollowersCountAsync(string userId);
         Task<Dictionary<string, int>> GetAllFollowersCountForOtherUsersAsync(List<string> userIds); //get all of the number of followings and followers for all of the auhtorized

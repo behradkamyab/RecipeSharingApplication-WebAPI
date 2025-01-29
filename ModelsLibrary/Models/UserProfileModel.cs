@@ -24,9 +24,9 @@ namespace ModelsLibrary.Models
         public string UserId { get; set; } //FK => user
         public ApplicationUser User { get; set; } // navigation property
 
-        public UserProfileModel(string bio , string email , string userId)
+        public UserProfileModel( Guid id,string bio , string email , string userId)
         {
-            Id = Guid.NewGuid();
+            Id = id;
             Bio = bio;
             Email = email;
             UserId = userId;   

@@ -236,11 +236,11 @@ namespace DataAccessLayerLibrary.Repositories
         }
         
 
-        public async Task<IEnumerable<UserProfileModel>?> GetAllFollowersAsync(string userId)
+        public async Task<IEnumerable<ApplicationUser>?> GetAllFollowersAsync(string userId)
         {
             try
             {
-              return  await _context.Follows.Where(u => u.FollowedId == userId).Include(u => u.FollowerUsers).ThenInclude(u => u.Profile).Select(u => u.FollowerUsers.Profile).ToListAsync();  
+              return  await _context.Follows.Where(u => u.FollowedId == userId).Include(u => u.FollowerUsers).Select(u => u.FollowerUsers).ToListAsync();  
             }
             catch (Exception ex)
             {
@@ -250,11 +250,11 @@ namespace DataAccessLayerLibrary.Repositories
             }
         }
 
-        public async Task<IEnumerable<UserProfileModel>?> GetAllFollowingsAsync(string userId)
+        public async Task<IEnumerable<ApplicationUser>?> GetAllFollowingsAsync(string userId)
         {
             try
             {
-                return await _context.Follows.Where(f => f.FollowerId == userId).Include(u => u.FollowedUsers).ThenInclude( u => u.Profile).Select(u => u.FollowedUsers.Profile).ToListAsync();
+                return await _context.Follows.Where(f => f.FollowerId == userId).Include(u => u.FollowedUsers).Select(u => u.FollowedUsers).ToListAsync();
             }
             catch (Exception ex)
             {

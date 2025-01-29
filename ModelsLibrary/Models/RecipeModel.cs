@@ -5,6 +5,7 @@ namespace ModelsLibrary.Models
 {
     public class RecipeModel
     {
+      
         [Required]
         public Guid Id { get; set; } //PK
 
@@ -44,9 +45,9 @@ namespace ModelsLibrary.Models
 
         public RecipeModel() { }
 
-        public RecipeModel( string name, string description, string category, string cuisine, string userid)
+        public RecipeModel(Guid id ,string name, string description, string category, string cuisine, string userid)
         {
-            Id = Guid.NewGuid();
+            Id = id;
             Name = name;
             Description = description;
             Category = category;

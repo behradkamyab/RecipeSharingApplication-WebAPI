@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using System.Xml.Linq;
 
 
 namespace ModelsLibrary.Models
@@ -7,21 +8,27 @@ namespace ModelsLibrary.Models
 
     public class InstructionRecipe
     {
+        public InstructionRecipe(Guid id, Guid recipeId, int step, string content)
+        {
+            Id = id;
+            RecipeId = recipeId;
+            Step = step;
+            Content = content;
+        }
         [Required]
-        public required Guid Id { get; set; } //PK
+        public  Guid Id { get; set; } //PK
 
 
-        [Required]
         [JsonIgnore]
-        public required Guid RecipeId { get; set; } //FK => recipe
+        public  Guid RecipeId { get; set; } //FK => recipe
 
         [JsonIgnore]
         public RecipeModel Recipe { get; set; } // navigation property
 
         
-        public required int Step { get; set; }
+        public  int Step { get; set; }
 
         [Required(ErrorMessage = "Please Provide the Content!")]
-        public required string Content { get; set; }
+        public  string Content { get; set; }
     }
 }

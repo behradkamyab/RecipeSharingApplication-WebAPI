@@ -7,36 +7,36 @@
       "RelativeMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|solutionrelative:recipesharingwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\managers\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\interfaces\\iusermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\interfaces\\iusermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\managers\\recipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\managers\\recipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\dataaccesslayerlibrary\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|solutionrelative:dataaccesslayerlibrary\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\dataaccesslayerlibrary\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|solutionrelative:dataaccesslayerlibrary\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9F39778-C825-4DF3-BEF1-2F190DC8A656}|SharedModelsLibrary\\SharedModelsLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\sharedmodelslibrary\\userprofiledtos\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9F39778-C825-4DF3-BEF1-2F190DC8A656}|SharedModelsLibrary\\SharedModelsLibrary.csproj|solutionrelative:sharedmodelslibrary\\userprofiledtos\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\recipesharingwebapi\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|solutionrelative:recipesharingwebapi\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\recipesharingwebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|solutionrelative:recipesharingwebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9F39778-C825-4DF3-BEF1-2F190DC8A656}|SharedModelsLibrary\\SharedModelsLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\sharedmodelslibrary\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9F39778-C825-4DF3-BEF1-2F190DC8A656}|SharedModelsLibrary\\SharedModelsLibrary.csproj|solutionrelative:sharedmodelslibrary\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\recipesharingwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57D2EDAE-AFA6-476C-8BDC-1ADEC0562237}|RecipeSharingWebApi\\RecipeSharingWebApi.csproj|solutionrelative:recipesharingwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\generators\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\generators\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\dataaccesslayerlibrary\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54DA35AE-50E1-409C-B841-C29C60795F0E}|DataAccessLayerLibrary\\DataAccessLayerLibrary.csproj|solutionrelative:dataaccesslayerlibrary\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\managers\\notificationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\managers\\notificationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|d:\\game-development\\projects\\web apis\\recipesharingapplication\\serviceslibrary\\serviceslibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{4A93F429-23E4-4813-A73B-FA25AC851BDD}|ServicesLibrary\\ServicesLibrary.csproj|solutionrelative:serviceslibrary\\serviceslibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,20 +46,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 223,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "RecipeSharingWebApi\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "RecipeSharingWebApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T10:36:28.218Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -69,95 +64,113 @@
               "RelativeDocumentMoniker": "RecipeSharingWebApi\\Controllers\\UserController.cs",
               "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "RecipeSharingWebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAADwv+8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAmwCMBAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T08:56:53.632Z",
+              "WhenOpened": "2025-01-29T08:57:38.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayerLibrary\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "DataAccessLayerLibrary\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAQwP0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T08:52:12.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayerLibrary\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "DataAccessLayerLibrary\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIAywBwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T08:51:42.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\SharedModelsLibrary\\UserProfileDTOs\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "SharedModelsLibrary\\UserProfileDTOs\\ProfileViewModel.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\SharedModelsLibrary\\UserProfileDTOs\\ProfileViewModel.cs",
+              "RelativeToolTip": "SharedModelsLibrary\\UserProfileDTOs\\ProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T08:45:38.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserManager.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Interfaces\\IUserManager.cs",
+              "RelativeDocumentMoniker": "ServicesLibrary\\Interfaces\\IUserManager.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Interfaces\\IUserManager.cs",
+              "RelativeToolTip": "ServicesLibrary\\Interfaces\\IUserManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wCAAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T09:34:51.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\UserManager.cs",
+              "RelativeDocumentMoniker": "ServicesLibrary\\Managers\\UserManager.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\UserManager.cs",
+              "RelativeToolTip": "ServicesLibrary\\Managers\\UserManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T11:42:53.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NotificationHub.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\SharedModelsLibrary\\Hubs\\NotificationHub.cs",
-              "RelativeDocumentMoniker": "SharedModelsLibrary\\Hubs\\NotificationHub.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\SharedModelsLibrary\\Hubs\\NotificationHub.cs",
-              "RelativeToolTip": "SharedModelsLibrary\\Hubs\\NotificationHub.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
+              "Title": "RecipeManager.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\RecipeManager.cs",
+              "RelativeDocumentMoniker": "ServicesLibrary\\Managers\\RecipeManager.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\RecipeManager.cs",
+              "RelativeToolTip": "ServicesLibrary\\Managers\\RecipeManager.cs",
+              "ViewState": "AgIAAOwBAAAAAAAAAAAAAPgBAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T08:26:06.251Z"
+              "WhenOpened": "2025-01-27T11:42:36.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "NotificationManager.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\NotificationManager.cs",
-              "RelativeDocumentMoniker": "ServicesLibrary\\Managers\\NotificationManager.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Managers\\NotificationManager.cs",
-              "RelativeToolTip": "ServicesLibrary\\Managers\\NotificationManager.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwEoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T06:31:41.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Program.cs",
-              "RelativeDocumentMoniker": "RecipeSharingWebApi\\Program.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Program.cs",
-              "RelativeToolTip": "RecipeSharingWebApi\\Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAmwEsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T06:59:04.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JwtProvider.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Generators\\JwtProvider.cs",
-              "RelativeDocumentMoniker": "ServicesLibrary\\Generators\\JwtProvider.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\Generators\\JwtProvider.cs",
-              "RelativeToolTip": "ServicesLibrary\\Generators\\JwtProvider.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA0wCYAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T09:09:35.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NotificationRepository.cs",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Repositories\\NotificationRepository.cs",
-              "RelativeDocumentMoniker": "DataAccessLayerLibrary\\Repositories\\NotificationRepository.cs",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\DataAccessLayerLibrary\\Repositories\\NotificationRepository.cs",
-              "RelativeToolTip": "DataAccessLayerLibrary\\Repositories\\NotificationRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwDsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T08:56:10.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "RecipeController.cs",
               "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\RecipeController.cs",
               "RelativeDocumentMoniker": "RecipeSharingWebApi\\Controllers\\RecipeController.cs",
               "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\RecipeController.cs",
               "RelativeToolTip": "RecipeSharingWebApi\\Controllers\\RecipeController.cs",
-              "ViewState": "AgIAAL0BAAAAAAAAAAAQwMoBAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCEAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T08:58:49.664Z",
+              "WhenOpened": "2025-01-28T09:45:09.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ServicesLibrary.csproj",
-              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\ServicesLibrary.csproj",
-              "RelativeDocumentMoniker": "ServicesLibrary\\ServicesLibrary.csproj",
-              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\ServicesLibrary\\ServicesLibrary.csproj",
-              "RelativeToolTip": "ServicesLibrary\\ServicesLibrary.csproj",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RecipeSharingWebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Game-Development\\Projects\\Web APIs\\RecipeSharingApplication\\RecipeSharingWebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RecipeSharingWebApi\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-25T06:31:40.733Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T10:36:28.218Z"
             }
           ]
         }

@@ -12,7 +12,7 @@ using DataAccessLayerLibrary.Interfaces;
 using SharedModelsLibrary.UserProfileDTOs;
 using SharedModelsLibrary.RecipeDto;
 using SharedModelsLibrary.RecipeDTOs;
-using ServicesLibrary.Delegates;
+
 
 namespace ServicesLibrary.Managers
 {
@@ -152,7 +152,7 @@ namespace ServicesLibrary.Managers
            
         }
 
-        public async Task<UserManagerResponse<ProfileViewModel>> GetProfileAsync(string userId, GetRecipeCountForOneUserDelegate getRecipesCountAsync)
+        public async Task<UserManagerResponse<ProfileViewModel>> GetProfileAsync(string userId, Func<string , Task<RecipeManagerResponse<int>>> getRecipesCountAsync)
         {
             try
             {
@@ -436,7 +436,7 @@ namespace ServicesLibrary.Managers
         {
 
 
-            var profile = new UserProfileModel("your bio", email, userId);
+            var profile = new UserProfileModel( Guid.NewGuid(),"your bio", email, userId);
             await _userRepository.CreateProfileAsync(profile);
 
 
@@ -532,77 +532,35 @@ namespace ServicesLibrary.Managers
             }
         }
 
-        public async Task<UserManagerResponse<IEnumerable<ProfileViewModel>>> GetAllFollowersForUserAsync(string userId , GetRecipeCountDelegate getRecipeCountAsync)
+        public async Task<UserManagerResponse<IEnumerable<UserViewModel>>> GetAllFollowersForUserAsync(string userId)
         {
             try
             {
                 var followers = await _userRepository.GetAllFollowersAsync(userId);
                 if (followers == null || !followers.Any())
                 {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+                    return new UserManagerResponse<IEnumerable<UserViewModel>>()
                     {
                         Success = false,
                         Message = "You are not following anyone"
                     };
                 }
-                // get all of the ids of followings
-                var followersUsersIds = followers.Select(f => f.UserId).ToList();
-                // Get the results from the tasks
-                var followersCounts = await _userRepository.GetAllFollowersCountForOtherUsersAsync(followersUsersIds);
-                if (followersCounts == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch followers counts."
-                    };
-                }
-                var followingsCounts = await _userRepository.GetAllFollowersCountForOtherUsersAsync(followersUsersIds);
-                if (followingsCounts == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch followings counts."
-                    };
-                }
-                var recipeCountsResponse = await getRecipeCountAsync(followersUsersIds);
-                if (!recipeCountsResponse.Success || recipeCountsResponse.Data == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch recipe counts."
-                    };
-                }
 
-                var recipeCounts = recipeCountsResponse.Data; // Extract the dictionary from the response
+                var followersViewModel = followers.Select(f => f.AsUserViewModel());
+               
 
-                var profileViewModels = new List<ProfileViewModel>();
-
-                foreach (var follower in followers)
-                {
-                    // Look up the pre-fetched data for the user
-                    followersCounts.TryGetValue(follower.UserId, out var followersCount);
-                    followingsCounts.TryGetValue(follower.UserId, out var followingsCount);
-                    recipeCounts.TryGetValue(follower.UserId, out var recipeCount);
-
-                    profileViewModels.Add(follower.AsProfileViewModel(followingsCount, followersCount, recipeCount));
-                }
-
-
-                return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+                return new UserManagerResponse<IEnumerable<UserViewModel>>()
                 {
                     Success = true,
                     Message = "List of all of your followers fetched",
-                    Data = profileViewModels
+                    Data = followersViewModel
                 };
 
             }
             catch (Exception)
             {
 
-                return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+                return new UserManagerResponse<IEnumerable<UserViewModel>>()
                 {
                     Success = false,
                     Message = "Internal Server Error",
@@ -611,77 +569,32 @@ namespace ServicesLibrary.Managers
             }
         }
 
-        public async Task<UserManagerResponse<IEnumerable<ProfileViewModel>>> GetAllFollowingForUserAsync(string userId, GetRecipeCountDelegate getRecipeCountAsync)
+        public async Task<UserManagerResponse<IEnumerable<UserViewModel>>> GetAllFollowingForUserAsync(string userId)
         {
             try
             {
                 var followings = await _userRepository.GetAllFollowingsAsync(userId);
                 if (followings == null || !followings.Any())
                 {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+                    return new UserManagerResponse<IEnumerable<UserViewModel>>()
                     {
                         Success = false,
                         Message = "You are not following anyone"
                     };
                 }
-                // get all of the ids of followings
-                var followingsUsersIds = followings.Select(f => f.UserId).ToList();
-
-                var followersCounts = await _userRepository.GetAllFollowersCountForOtherUsersAsync(followingsUsersIds);
-                if (followersCounts == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch followers counts."
-                    };
-                }
-                var followingsCounts = await _userRepository.GetAllFollowingsCountForOtherUsersAsync(followingsUsersIds);
-                if (followingsCounts == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch followings counts."
-                    };
-                }
-                var recipeCountsResponse = await getRecipeCountAsync(followingsUsersIds);
-                if (!recipeCountsResponse.Success || recipeCountsResponse.Data == null)
-                {
-                    return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
-                    {
-                        Success = false,
-                        Message = "Failed to fetch recipe counts."
-                    };
-                }
-
-                var recipeCounts = recipeCountsResponse.Data; // Extract the dictionary from the response
-
-                var profileViewModels = new List<ProfileViewModel>();  
-
-                foreach(var following in followings)
-                {
-                    // Look up the pre-fetched data for the user
-                    followersCounts.TryGetValue(following.UserId, out var followersCount);
-                    followingsCounts.TryGetValue(following.UserId, out var followingsCount);
-                    recipeCounts.TryGetValue(following.UserId, out var recipeCount);
-
-                    profileViewModels.Add(following.AsProfileViewModel(followingsCount, followersCount, recipeCount));
-                }
-               
-
-                return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+               var followingsViewModels = followings.Select(f => f.AsUserViewModel());
+                return new UserManagerResponse<IEnumerable<UserViewModel>>()
                 {
                     Success = true,
                     Message = "List of all of your followers fetched",
-                    Data = profileViewModels
+                    Data = followingsViewModels
                 };
 
             }
             catch (Exception)
             {
 
-                return new UserManagerResponse<IEnumerable<ProfileViewModel>>()
+                return new UserManagerResponse<IEnumerable<UserViewModel>>()
                 {
                     Success = false,
                     Message = "Internal Server Error",

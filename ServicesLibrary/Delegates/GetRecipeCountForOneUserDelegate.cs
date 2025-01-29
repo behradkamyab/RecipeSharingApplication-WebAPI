@@ -2,5 +2,5 @@
 
 namespace ServicesLibrary.Delegates
 {
-    public delegate Task<RecipeManagerResponse<int>> GetRecipeCountForOneUserDelegate( string userId);
+    public delegate Task<RecipeManagerResponse<int>> GetRecipeCountForOneUserDelegate(string userId);
 }

@@ -36,9 +36,11 @@ namespace RecipeSharingWebApi.Controllers
             }
 
 
-            GetRecipeCountForOneUserDelegate getRecipeCountDelegate = async (userId) =>
-                await _recipeManager.GetAllNumbersOfRecipesCreatedByUserAsync(userId);
-            var result = await _userManager.GetProfileAsync(userId , getRecipeCountDelegate);
+            var result = await _userManager.GetProfileAsync(userId , async (userId) =>
+            {
+                var numbers = await _recipeManager.GetAllNumbersOfRecipesCreatedByUserAsync (userId);
+                return numbers;
+            });
 
             if (result.Success) 
             {
@@ -250,8 +252,8 @@ namespace RecipeSharingWebApi.Controllers
             return Ok(result);
         }
 
-        //GET /api/User/followers?numbers=true
-        [Authorize , HttpGet("followers")]
+       // GET /api/User/followers? numbers = true
+        [Authorize, HttpGet("followers")]
         public async Task<IActionResult> GetAllFollowers([FromQuery] bool numbers)
         {
             var followerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -260,7 +262,7 @@ namespace RecipeSharingWebApi.Controllers
             {
                 return Unauthorized("User Id not found in token");
             }
-            if(numbers  == true)
+            if (numbers == true)
             {
                 var response = await _userManager.GetAllFollowersCountForUserAsync(followerId);
                 if (!response.Success)
@@ -270,18 +272,17 @@ namespace RecipeSharingWebApi.Controllers
                 return Ok(response);
 
             }
-            GetRecipeCountDelegate getRecipeCountDelegate = async (userIds) =>
-              await _recipeManager.GetAllNumbersOfRecipesCreatedByUserForOtherUsersAsync(userIds);
-            var result = await _userManager.GetAllFollowersForUserAsync(followerId , getRecipeCountDelegate);
+           
+            var result = await _userManager.GetAllFollowersForUserAsync(followerId);
             if (!result.Success)
             {
                 return BadRequest(result);
             }
             return Ok(result);
         }
-        
-        //GET /api/User/followings
-        [Authorize , HttpGet("followings")]
+
+       // GET /api/User/followings
+        [Authorize, HttpGet("followings")]
         public async Task<IActionResult> GetAllFollowings([FromQuery] bool numbers)
         {
             var followerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -301,9 +302,8 @@ namespace RecipeSharingWebApi.Controllers
                 return Ok(response);
 
             }
-            GetRecipeCountDelegate getRecipeCountDelegate = async (userIds) =>
-             await _recipeManager.GetAllNumbersOfRecipesCreatedByUserForOtherUsersAsync(userIds);
-            var result = await _userManager.GetAllFollowingForUserAsync(followerId , getRecipeCountDelegate);
+            
+            var result = await _userManager.GetAllFollowingForUserAsync(followerId);
             if (!result.Success)
             {
                 return BadRequest(result);
@@ -311,7 +311,7 @@ namespace RecipeSharingWebApi.Controllers
             return Ok(result);
         }
 
-       
+
     }
 
 }

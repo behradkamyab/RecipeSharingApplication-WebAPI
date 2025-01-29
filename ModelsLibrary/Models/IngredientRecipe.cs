@@ -4,20 +4,28 @@ namespace ModelsLibrary.Models
 {
     public class IngredientRecipe
     {
-        [Required]
-        public required Guid Id { get; set; } //PK
 
-        [Required]
+        public IngredientRecipe(Guid id,Guid recipeId , string name , int quantity)
+        {
+            Id = id;
+            RecipeId = recipeId;
+            Name = name;
+            Quantity = quantity;
+        }
+
+
+        public  Guid Id { get; set; } //PK
+
         [JsonIgnore]
-        public required Guid RecipeId { get; set; } //FK => recipe
+        public  Guid RecipeId { get; set; } //FK => recipe
 
 
         [JsonIgnore]
         public RecipeModel Recipe { get; set; } // Navigation property
 
         [Required(ErrorMessage = "Please Provide the Name!")]
-        public required string Name { get; set; }
+        public  string Name { get; set; }
         [Required(ErrorMessage = "Please Provide the Quantity!")]
-        public required int Quantity { get; set; }
+        public  int Quantity { get; set; }
     }
 }
